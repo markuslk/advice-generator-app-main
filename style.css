@@ -1,0 +1,159 @@
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+
+* {
+	margin: 0;
+
+	padding: 0;
+
+	font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+/* Set core body defaults */
+
+body {
+	text-rendering: optimizeSpeed;
+	font-family: "Manrope", sans-serif;
+	line-height: 1.5;
+	background-color: var(--neutral-dark-blue);
+}
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+
+img,
+picture {
+	max-width: 100%;
+
+	display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+
+		animation-iteration-count: 1 !important;
+
+		transition-duration: 0.01ms !important;
+
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Root styles */
+
+:root {
+	--primary-cyan: hsl(193, 38%, 86%);
+	--primary-green: hsl(150, 100%, 66%);
+
+	--neutral-gray-blue: hsl(217, 19%, 38%);
+	--neutral-dark-gray-blue: hsl(217, 19%, 24%);
+	--neutral-dark-blue: hsl(218, 23%, 16%);
+}
+
+/* Container styles  */
+
+.container {
+	max-width: 40rem;
+	margin-inline: auto;
+}
+
+/* Card styles  */
+
+.card {
+	background-color: var(--neutral-dark-gray-blue);
+	width: 90%;
+	color: var(--primary-cyan);
+	margin-inline: auto;
+	margin-block-start: 40%;
+	text-align: center;
+	padding: 2rem 2rem 1rem;
+	font-weight: 800;
+	font-size: 1.75rem;
+	border-radius: 10px;
+}
+
+.advice_number {
+	color: var(--primary-green);
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	letter-spacing: 0.3rem;
+	font-weight: 500;
+	margin-block: 0.5rem 2rem;
+}
+
+.advice {
+	margin-block: 1.5rem;
+}
+
+.card img {
+	margin-inline: auto;
+}
+
+.desktop-img {
+	display: none;
+}
+
+.btn {
+	transform: translateY(2.5rem);
+}
+
+.generate {
+	background-color: var(--primary-green);
+	padding: 1rem 1.5rem;
+	color: var(--neutral-dark-blue);
+	border-radius: 50%;
+	font-size: 2rem;
+}
+
+.generate:hover {
+	-webkit-box-shadow: 0px 0px 25px 0px var(--primary-green);
+	-moz-box-shadow: 0px 0px 25px 0px var(--primary-green);
+	box-shadow: 0px 0px 25px 0px var(--primary-green);
+	opacity: 0.9;
+	background-color: hsl(150, 100%, 64%);
+}
+
+@media only screen and (max-width: 640px) {
+	.card {
+		font-size: 1.4rem;
+	}
+}
