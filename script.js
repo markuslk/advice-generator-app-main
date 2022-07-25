@@ -18,3 +18,5 @@ getAdvice();
 generate.onclick = () => {
 	getAdvice();
 };
+
+// For some reason Firefox browser wont generate new advice onclick
