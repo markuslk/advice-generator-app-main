@@ -143,6 +143,7 @@ picture {
 	color: var(--neutral-dark-blue);
 	border-radius: 50%;
 	font-size: 2rem;
+	transition: all 0.025s ease-in;
 }
 
 .generate:hover {
@@ -150,6 +151,11 @@ picture {
 	box-shadow: 0px 0px 25px 0px var(--primary-green);
 	opacity: 0.9;
 	background-color: hsl(150, 100%, 64%);
+}
+
+.generate:active {
+	background-color: hsl(150, 100%, 57%);
+	padding: 0.925rem 1.425rem;
 }
 
 @media only screen and (max-width: 640px) {
